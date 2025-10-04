@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  font-family:
+    Playfair Display,
+    Roboto;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin: 5% 20%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  position: relative;
+  z-index: 5;
+  max-width: 30%;
+  padding: 90px 50px;
+  background-color: white;
+  box-shadow: 5px 5px 20px;
+}
+
+.design-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(20, 1, 128);
+  max-height: 320px;
+  width: 100%;
+  transform: skewY(-9deg);
+  transform-origin: bottom left;
+}
+
+.name-image {
+  position: relative;
+  display: flex;
+  background-image: url(./assets/pexels-matreding-34111865.jpg);
+  align-items: end;
+  justify-content: center;
+  min-height: 350px;
+  max-width: fit-content;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  z-index: 10;
+  box-shadow: 5px 5px 30px black;
+}
+
+header .links {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-right: 20px;
+  z-index: 20;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
+  gap: 30px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.image {
+  padding: 100px 50px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project_location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.heading > * {
+  padding: 5px 15px;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer {
+  background-color: rgb(20, 1, 128);
+  padding: 100px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+footer img {
+  max-width: 400px;
+  min-width: 100px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container .links i {
+  font-size: 200%;
+}
+
+.container .links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+svg {
+  max-width: 30px;
+}
+
+#number {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0;
+    margin: 5%;
+  }
+
+  .description {
+    max-height: fit-content;
+    padding: 50px 25px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 400px));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 0;
+    margin: 5%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: auto;
+  }
+
+  .description {
+    max-height: fit-content;
+    max-width: 80%;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
